@@ -20,7 +20,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("users/", include("users.urls", namespace="users")),
-    path("elsalnet/", include("elsalnet.urls", namespace="elsalnet")),
+    path("company/", include(("elsalnet.urls", "elsalnet"), namespace="company")),
     path(
         "swagger/",
         schema_view.with_ui("swagger", cache_timeout=0),
