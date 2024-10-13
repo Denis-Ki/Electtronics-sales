@@ -6,7 +6,7 @@ from .models import Company, Product
 @admin.action(description="Обнуление задолженности")
 def reset_debt(modeladmin, request, queryset):
     """Очищает задолженность у выбранных объектов"""
-    queryset.update(debt=0)
+    queryset.update(debt_to_supplier=0)
 
 
 @admin.register(Company)
